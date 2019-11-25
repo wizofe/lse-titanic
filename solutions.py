@@ -21,6 +21,7 @@
 
 sns.set_palette("Paired")
 
+# The whiskers show variability outside the upper and lower quartiles
 plot2 = sns.barplot(x=td['Pclass'], y= td['Survived'])
 
 td['Alive'] = td['Survived'].apply(convert_survivor)
