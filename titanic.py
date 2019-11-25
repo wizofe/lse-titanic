@@ -11,6 +11,7 @@ The Unlicense
 # if pandas is not installed
 # pip install pandas
 import pandas
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Save the csv file to a variable
@@ -19,12 +20,8 @@ td = pandas.read_csv(
         )
 
 def convert_survivor(survived):
+    """ Convert the survivor values to categorical boolean labels """
     if survived == 1:
         return "YES"
     else:
         return "NO"
-
-td['Alive'] = td['Survived'].apply(convert_survivor)
-byPclass = td.groupby('Pclass')
-
-print(byPclass['Survived'].mean())
