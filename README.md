@@ -1,2 +1,4 @@
 # lse-titanic
-Introduction to Python
+Introduction to Python @ LSE
+
+Interview material and presentation.
