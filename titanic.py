@@ -14,14 +14,9 @@ import pandas
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+sns.set_palette("Paired")
+
 # Save the csv file to a variable
 td = pandas.read_csv(
         'https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv'
         )
-
-def convert_survivor(survived):
-    """ Convert the survivor values to categorical boolean labels """
-    if survived == 1:
-        return "YES"
-    else:
-        return "NO"
