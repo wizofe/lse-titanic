@@ -4,14 +4,21 @@
 # a + 3
 # b + 3
 # if else boolean values
-# 
 # print(a,b)
 # print(a+3)
 # print(b+' cats')
 # print(type(a))
 # print(td)
 
+# now lets say you want to go shopping and you need a collection of items
+# shopping_list = ['oat milk', 'apples']
+# shopping_list[1]
+# phonebook = { 'noel a': '+44010', 'sarah b': '+33212'}
+# phonebook['sarah b']
 
+
+
+# Main solution
 ## To show the first 5 entries of the dataset we use the head function of Pandas
 # td.head()
 
