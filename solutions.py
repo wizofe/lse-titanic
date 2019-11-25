@@ -12,25 +12,23 @@
 # print(td)
 
 
-## Show the first 5 entries of the dataset 
+## To show the first 5 entries of the dataset we use the head function of Pandas
 # td.head()
 
-## Sort the dataset by the mean value of passenger class
+## To sort the dataset by the mean value of passenger class
 # td.groupby('Pclass').mean()
 
+## Tho show the survival rate depending on the passenger class
+## we are using seaborn's barplot function
+## The error bars show the variability in the upper quartiles
+plot2 = sns.barplot(x=td['Pclass'], y= td['Survived']*100)
 
-sns.set_palette("Paired")
+## create a new figure
+# plt.figure()
 
-# The whiskers show variability outside the upper and lower quartiles
-plot2 = sns.barplot(x=td['Pclass'], y= td['Survived'])
-
-td['Alive'] = td['Survived'].apply(convert_survivor)
-byPclass = td.groupby('Pclass')
-print(byPclass['Survived'].mean())
-
-plt.figure()
-
-# histogram across a categorical (v.s. quantitative) variable
-plot1 = sns.countplot(x = td['Pclass'], 
-                   hue=td['Alive'])
-plt.title('Number of Persons Alive by Class')
+## To show the number of persons alive by class
+## we are using the countplot from seaborn
+## histogram across a categorical (v.s. quantitative) variable
+# plot1 = sns.countplot(x = td['Pclass'], 
+#                   hue=td['Alive'])
+# plt.title('Number of Persons Alive by Class')
